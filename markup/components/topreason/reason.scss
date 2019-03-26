@@ -1,0 +1,180 @@
+.reason{
+    padding: em(90) 0;
+    position: relative;
+    @include max-screen($grid-ls) {
+        padding: em(45) 0;
+    }
+    &__inner{
+        @include wrapper;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        @include max-screen($tablets - 100px) {
+            flex-wrap: wrap;
+        }
+    }
+    &__item{
+        width: 33.3333%;
+        margin-right:80px;
+        @include max-screen($tablets - 100px) {
+            width: 40.8888%;
+        }
+        @include max-screen($phones) {
+            width: 100%;
+            margin-bottom: 24px;
+            margin-right:0;
+        }
+        &:last-child{
+            margin-right: 0;
+            @include max-screen($phones) {
+                margin-bottom:0;
+            }
+        }
+        &:first-child{
+            @include max-screen($tablets - 100px) {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 24px;
+            }
+        }
+        
+    }
+    &__title{
+        font-family: 'PT Serif', serif;
+        font-size: em(34);
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        color: $grey;
+        max-width: 300px;
+        @include max-screen($grid-ls) {
+            font-size:em(24);
+        }
+    }
+    .jq-selectbox{
+        width: 100%;
+        position: relative;
+        color: $red;
+        
+    }
+    .jq-selectbox__select{
+        height: auto;
+        padding: 0;
+        padding-bottom: 5px;
+        box-shadow: none;
+    }
+    .jq-selectbox__select-text{
+        font-family: 'PT Sans', sans-serif;
+        font-size: em(28);
+        text-transform: uppercase;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.21;
+        letter-spacing: normal;
+        color: $red;
+        @include max-screen($grid-ls) {
+            font-size:em(16);
+        }
+    }
+    .jq-selectbox__trigger{
+        border-left:0;
+        top:0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .jq-selectbox__trigger-arrow{
+        top:auto;
+        background-image:url(%=static=%content/arrow-down.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        border:none!important;
+        width: 15px;
+        height:8px;
+        @include max-screen($large) {
+            right:2px;
+        }
+    }
+    &__num{
+        font-family: 'PT Serif', serif;
+        font-size: 70px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        color: #ffffff;
+        padding-right: 15px;
+        margin-right: 15px;
+        position: relative;
+        @include max-screen($tablets) {
+            width: 100%;
+            font-size: em(42);
+            margin-bottom: 16px;
+        }
+        &:after{
+            content: '';
+            display: inline-block;
+            color:#fff;
+            position: absolute;
+            right:0;
+            top:0;
+            height: 100%;
+            width: 1px;
+            background: #fff;
+            @include max-screen($tablets) {
+                display: none;
+            }
+        }
+    }
+    &--red{
+        background-color: $red;
+        .reason__inner{
+            align-items: flex-start;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+        }
+        .reason__item{
+            display: flex;
+            width: auto;
+            align-items: flex-start;
+            margin-right: 30px;
+            @include max-screen($tablets) {
+                flex-wrap: wrap;
+            }
+            &:first-child{
+                margin-right: 0;
+                @include max-screen($tablets) {
+                    margin-right: 10px;
+                }
+            }
+            &:last-child{
+                margin-right: 0;
+                @include max-screen($tablets) {
+                    margin-right: 0;
+                }
+                
+            }
+            @include max-screen($tablets) {
+                margin-right: 10px;
+            }
+        }
+        .reason__title{
+            font-family: 'PT Sans', sans-serif;
+            font-size: 24px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            color: #ffffff;
+            @include max-screen($tablets) {
+                font-size: em(14);
+            }
+        }
+    }
+}

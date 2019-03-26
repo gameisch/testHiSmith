@@ -1,0 +1,217 @@
+html {
+    font-size: #{$default-font-size}px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding-top: 143px;
+    transition: padding-top .2s;
+    -webkit-font-smoothing: antialiased;
+    &.touch{
+        cursor: pointer;
+    }
+}
+.-content- {
+    flex-grow: 1;
+}
+section{
+    position: relative;
+    z-index: 1;
+}
+.-select, .jq-selectbox__select{
+    color: #333;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: .2px;
+    padding: 1em 0;
+    border: 0;
+    border-bottom: 2px solid #ababab!important;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    background: transparent;
+    background-image:none;
+    -webkit-transition: .2s;
+    transition: .2s;
+    line-height: 1;
+    -webkit-appearance: none;
+    border-radius: 0;
+    outline: none;
+    border-left:none!important;
+    border-right:none!important;
+    border-top:none!important;
+    box-shadow: none!important;
+    background: transparent;
+    background-image: none;
+    outline: none!important;
+    &:focus, &::selection, &:hover, &.focused, &.dropdown {
+        border-left:none!important;
+        border-right:none!important;
+        border-top:none!important;
+        box-shadow: none!important;
+        background: transparent;
+        background-image: none;
+        outline: none!important;
+        border-bottom: 2px solid $red!important;
+    }
+    &.invalid {
+        border-color: #f20;
+    }
+    &::placeholder {
+        color: #5a5a5a;
+    }
+}
+.swiper-button-disabled{
+    visibility: hidden;
+}
+img {
+    max-width: 100%;
+}
+*:focus {
+    outline: none;
+}
+input, textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+
+a {
+    color: #1b85b1;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
+blockquote {
+    font-style: italic;
+    color: #3c3c3c;
+    font-size: em(24);
+    line-height: 1.75;
+    position: relative;
+    // width: calc(100% - 100px);
+    width: 90%;
+    margin:80px auto;
+    margin-right: 15%;
+    @include max-screen($grid-lm) {
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100% - 100px);
+        // width: 50%;
+    }
+    @include max-screen($grid-sl) {
+        width: calc(100% - 80px);
+        margin-right: 40px;
+        margin-left: 40px;
+        font-size: 18px;
+    }
+    @include max-screen($phones) {
+        width: calc(100% - 60px);
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        width: 56px;
+        height: 47px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-image: url(%=static=%content/quote-3.svg);
+        background-size: contain;
+        @include max-screen(1320px) {
+            width: 40px;
+            height: 40px;
+        }
+
+        @include max-screen($grid-sl) {
+            width: 20px;
+            height: 20px;
+        }
+
+    }
+    &:before {
+        top: -25px;
+        left: -80px;
+        @include max-screen(1320px) {
+            top:-40px;
+            left: 0px;
+        }
+        @include max-screen($grid-lm) {
+            left: -60px;
+            top:-15px;
+        }
+        @include max-screen($grid-sl) {
+            left: -40px;
+        }
+    }
+    &:after {
+        bottom: -15px;
+        right: -80px;
+        @include max-screen(1320px) {
+            right: -50px;
+        }
+        @include max-screen($grid-sl) {
+            right: -40px;
+        }
+    }
+    p {
+        margin: 0 0 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.h1,.h2{
+    color: #5a5a5a;
+    font-size: em(34);
+    font-weight: 700;
+    line-height: 1.41;
+    margin: 0 0 30px;
+}
+.bg-white{
+    background-color:#ffffff;
+}
+.bg-light-cyan{
+    background-color:rgba($cyan, .05);
+}
+.-video- {
+    padding-top: 56%;
+    position: relative;
+    width: 100%;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+.spot{
+    position: absolute;
+    width: 450px;
+    height: 600px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 600px;
+    @include max-screen($grid-ls) {
+        display: none;
+    }
+    &--bigger{
+        height: 200%;
+        background-size: 200%;
+        width: 30%;
+        top:80%;
+        z-index: 1;
+    }  
+}

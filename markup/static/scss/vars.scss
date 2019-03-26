@@ -1,0 +1,76 @@
+$default-font-size: 16;
+
+$grid-lm: 1280px;
+$large: 1280px;
+$grid-ls: 960px;
+$grid-sl: 768px;
+$tablets: 768px;
+$grid-sm: 480px;
+$phones: 480px; 
+$grid-s: 320px;
+
+$grey: #636363;
+$light: #dddddd;
+$blue: #4466fb;
+$cyan: #1b85b1;
+$burgundy: #df6464;
+$green: #42c168;
+$red: #ff351b;
+$purple: #b25bcc;
+$textcolor: #b0afaf;
+
+.btn {
+    position: relative;
+    height: 50px;
+    transition: .2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 em(30);
+    padding-top: 50px;
+    padding-left: 0;
+    background-color: transparent;
+    // background-image: url(%=static=%content/Button_body.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 3px;
+    text-decoration: none;
+    border: 0;
+    font-family: 'PT Serif', serif;
+    font-size: em(24);
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $red;
+    &[disabled] {
+        pointer-events: none;
+        opacity: .5;
+    }
+    &:hover {
+        box-shadow: none;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        height: 45px;
+        top:0;
+        left:0;
+        border-left:2px solid $red;
+    }
+}
+
+.link {
+    color: #4f67bb;
+    font-size: em(18);
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}

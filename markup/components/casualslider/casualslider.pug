@@ -1,0 +1,81 @@
+mixin casSlider(data)
+    if data === 'first'
+        section.casSlider(class='casSlider--' + data)
+            .casSlider__inner
+                .swiper-container
+                        .swiper-wrapper
+                            - for (var i = 0; i < 2; i++)
+                                .swiper-slide
+                                    .h2.casSlider__title Rosaburgh
+                                    .casSlider__content
+                                        .casSlider__heading Unmatched Toner Cartridge Quality 20 Less Than Oem Price
+                                        .casSlider__text A Pocket PC is a handheld computer, which features many of the same capabilities as a modern PC. These handy little devices allow individuals to retrieve and store e-mail messages, create a contact file, coordinate appointments.
+                                        .casSlider__button
+                                            a(href='#').btn Read more...
+            .navigation-wrap
+                .casSlider-sb.casSlider-sb--left
+                .casSlider-sb.casSlider-sb--right
+    if data === 'people'
+        section.casSlider(class='casSlider--' + data)
+            .casSlider__inner
+                .h2.casSlider__title Gerryville
+                .swiper-container
+                        .swiper-wrapper
+                            - for (var i = 0; i < 5; i++)
+                                .swiper-slide
+                                    .casSlider__content
+                                        .casSlider__img(style='background-image:url(%=static=%img/content/people-0.png)')
+                                        .casSlider__text Delivering Kisses And Miracles
+                                        .casSlider__button 
+                                            a(href='#').btn Port ivy
+                                .swiper-slide
+                                    .casSlider__content
+                                        .casSlider__img(style='background-image:url(%=static=%img/content/people-1.png)')
+                                        .casSlider__text Delivering Kisses And Miracles
+                                        .casSlider__button 
+                                            a(href='#').btn Port ivy
+                                .swiper-slide
+                                    .casSlider__content
+                                        .casSlider__img(style='background-image:url(%=static=%img/content/people-2.png)')
+                                        .casSlider__text Delivering Kisses And Miracles
+                                        .casSlider__button 
+                                            a(href='#').btn Port ivy
+            .navigation-wrap
+                .casSlider-sb.casSlider-sb--left
+                .casSlider-sb.casSlider-sb--right
+    if data === 'street'
+        section.casSlider(class='casSlider--' + data)
+            .casSlider__inner
+                .h2.casSlider__title Save Money The Crock Pot Way
+                .casSlider__img(style='background-image:url(%=static=%img/content/bg3.png)')
+                .swiper-container
+                        .swiper-wrapper
+                            - for (var i = 1; i < 3; i++)
+                                .swiper-slide
+                                    
+                                    .casSlider__content
+                                        .casSlider__heading Two Questions To Ask About Bird Flu Vaccines
+                                        .casSlider__text If you are a male over the age of 40 and are suffering from weakness, impotence, pain, stiffness, drooping muscles, depression, anxiety, or heat intolerance, you may be experiencing “andropause”.
+                                        .casSlider__button 
+                                            a(href='#').btn Read more...
+            .navigation-wrap
+                .casSlider-sb.casSlider-sb--left
+                .casSlider-sb.casSlider-sb--right
+    if data === 'skate'
+        section.casSlider(class='casSlider--' + data)
+            .casSlider__inner
+                .h2.casSlider__title Rebeccamouth
+                .casSlider__img(style='background-image:url(%=static=%img/content/bg4.png)')
+                .swiper-container
+                        .swiper-wrapper
+                            
+                                .swiper-slide
+                                    
+                                    .casSlider__content
+                                        .casSlider__heading South Justicestad
+                                        .casSlider__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin odales pulvinar tempor. ?Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                                        .casSlider__button 
+                                            a(href='#').btn Read more...
+            .navigation-wrap
+                .casSlider-sb.casSlider-sb--left
+                .casSlider-sb.casSlider-sb--right

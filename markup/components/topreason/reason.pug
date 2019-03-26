@@ -1,0 +1,24 @@
+mixin reason(data)
+    section.reason(class='reason--' + data)
+        .reason__inner
+            if data === 'white'
+                .reason__item
+                    .h3.reason__title Top 3 Reasons Why You Need Cookie:
+                .reason__item
+                    select.-select-
+                        option Jeffery Ramos
+                        option Option 2
+                .reason__item
+                    select.-select-
+                        option Joe Robinson
+                        option Option 2
+            if data === 'red'
+                .reason__item
+                    .reason__num 250
+                    .h3.reason__title A Brief History Of Anesthetics
+                .reason__item
+                    .reason__num 65
+                    .reason__title Old Fashioned Recipe For Preventing Allergies
+                .reason__item
+                    .reason__num 80
+                    .h3.reason__title Home Remedies For Boils

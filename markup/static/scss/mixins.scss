@@ -1,0 +1,65 @@
+@import "vars";
+
+@mixin wrapper($width: $grid-lm) {
+    display: flex;
+    width: $width;
+    margin: 0 auto;
+    padding-left: 75px;
+    padding-right: 75px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    @media (max-width: $grid-lm) {
+        width: $grid-ls;
+    }
+    @media (max-width: $grid-ls) {
+        width: 100%;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    @media (max-width: $tablets) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@mixin max-screen($max) {
+    @media screen and (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin min-screen($min) {
+    @media screen and (min-width: $min + 1px) {
+        @content;
+    }
+}
+
+@function em($pixels, $context: $default-font-size) {
+    @return #{$pixels/$context}em;
+}
+@function rem($pixels, $context: $default-font-size) {
+    @return #{$pixels/$context}rem;
+}
+@mixin flipIn{
+    -webkit-animation: flipdown 0.5s ease both;
+    -moz-animation: flipdown 0.5s ease both;
+    -o-animation: flipdown 0.5s ease both;
+    animation: flipdown 0.5s ease both;
+}
+@mixin trnss{
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+@mixin noSelect{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+

@@ -1,0 +1,23 @@
+mixin hero(page, bg)
+    section.hero
+        //- img(src='%=static=%img/content/' + bg + '')
+        .hero__inner
+            if page === 'index'
+                .hero__bg(style= bg ? 'background-image:url(%=static=%img/content/' + bg + ')' : '')
+                .swiper-container
+                    .swiper-wrapper
+                        - for (var i = 0; i < 6; i++)
+                            .swiper-slide
+                                
+                                .hero__asset
+                                    img(src='%=static=%img/content/asset.svg')
+                                .hero__content
+                                    .hero__title Success Steps For Your Personal Or Business Life Success Steps For Your 
+                                    //- .hero__text
+                                    a(href='#').btn.hero__button Read more
+
+                    .pagination-wrap
+                        .swiper-pagination
+                    .navigation-wrap
+                        .hero-sb.hero-sb--left
+                        .hero-sb.hero-sb--right

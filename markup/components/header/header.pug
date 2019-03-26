@@ -1,0 +1,20 @@
+mixin header(data)
+    header.header
+        .header__inner
+            a(href='index.html').header__logo
+                //- img(src='%=static=%img/content/logo.svg')
+                | LOGO
+            .header__content
+                .header__content-close.fa.fa-times
+                .header__action
+                    a(href='#').header__locale rus
+                    a(href='#').header__locale eng
+                    a(href='#').header__locale.active chn
+                .header__menu
+                    a(href='#').active About
+                    a(href='#') Page 2
+                    a(href='#') Page 3
+                    a(href='#') Page 4
+                    a(href='#') Page 5
+                    a(href='#').header__search(style='background-image:url(%=static=%img/content/search-icon.svg)')
+            .header__trigger.fa.fa-bars

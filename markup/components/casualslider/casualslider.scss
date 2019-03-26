@@ -1,0 +1,393 @@
+.casSlider{
+    padding: em(60) 0;
+    position: relative;
+    background-color: $grey;
+    @include max-screen($grid-ls) {
+        padding: em(35) 0;
+    }
+    &__inner {
+        position: relative;
+        width: 100%;
+    }
+    &__title{
+        color: #fff;
+        font-family: 'PT Serif', serif;
+        font-size: em(34);
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        @include max-screen($grid-ls) {
+            font-size:em(24);
+        }
+    }
+    .swiper-container{
+        @include wrapper();
+        position: relative;
+        max-width: $grid-ls;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        z-index: 11;
+        box-sizing: content-box;
+        @include max-screen($grid-sl) {
+            min-height: 0;
+        }
+        @include max-screen($large) {
+            box-sizing: border-box;
+        }
+        
+    }
+    // &__heading, &__text, &__button{}
+    &__content{
+        @include wrapper();
+        position: relative;
+        max-width: $tablets;
+        @include max-screen($large) {
+            box-sizing: border-box;
+        }
+    }
+    &__heading{
+        font-family: 'PT Sans', sans-serif;
+        width: 60%;
+        font-size: em(30);
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        @include max-screen($grid-ls) {
+            font-size:em(20);
+        }
+        @include max-screen($tablets) {
+            width: 100%;
+        }
+    }
+    &__text{
+        margin-top:10px;
+        margin-bottom:10px;
+        color:#fff;
+        font-style: italic;
+        padding-right: 10%;
+        @include max-screen($tablets) {
+            padding-right: 0;
+        }
+        @include max-screen($grid-ls) {
+            font-size:em(11);
+        }
+    }
+    &__img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+    &__button{
+        width: 100%;
+        text-align: right;
+        display: inline-block;
+        float: right;
+        .btn{
+            font-family: 'PT Sans', sans-serif;
+            font-size: 10px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            padding-right: 0;
+            text-align: right;
+            color: #ffffff;
+            &:before{
+                border-left:0;
+                border-right:2px solid $red;
+            }
+        }
+    }
+    .navigation-wrap {
+        @include wrapper();
+        max-width: $grid-ls;
+        position: absolute;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        left:0;
+        right:0;
+        bottom: 0;
+        height: 100%;
+        margin-top:75px;
+        margin-bottom: 75px;
+        @include max-screen($large) {
+            margin-top:35px;
+            margin-bottom: 0;
+            box-sizing: border-box;
+        }
+        @include max-screen($grid-sl) {
+            min-height: 0;
+            margin-top:35px;
+            margin-bottom: 35px;
+        }
+    }
+    .casSlider-sb{
+        position: absolute;
+        width: 31px;
+        height: 31px;
+        background-image:url(%=static=%content/arrow-down.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 999;
+        cursor: pointer;
+        transition: ease-in .3s;
+        @include max-screen($grid-ls) {
+            width: 20px;
+            height:20px;
+        }
+        &--left{
+            left:-75px;
+            transform:rotate(90deg);
+            @include max-screen($large) {
+                left:5px;
+            }
+        }
+        &--right{
+            right:-85px;
+            transform:rotate(-90deg);
+            @include max-screen($large) {
+                right:5px;
+            }
+        }
+        &:hover{
+            opacity: .75;
+        }
+    }
+    &--people{
+        padding-bottom: 0;
+        background-color: #fff;
+        .casSlider__title{
+            color:$grey;
+            position: relative;
+            max-width: $grid-ls;
+            margin:0 auto;
+            margin-bottom:50px;
+            @include max-screen($large) {
+                box-sizing: border-box;
+                padding-left: 75px;
+                padding-right: 75px;
+            }
+            @include max-screen($grid-ls) {
+                padding-left: 35px;
+                padding-right: 35px;
+            }
+        }
+        .swiper-button-disabled{
+            visibility: visible;
+        }
+        .swiper-slide-prev{
+            visibility: hidden;
+        }
+        .swiper-slide{
+            display: flex;
+        }
+        .casSlider__content{
+            width: 100%;
+            height: 560px;
+            padding: 0;
+            // margin: 0 30px;
+            margin-left:0;
+            display: inline-block;
+            // &:last-child{
+            //     left:-2.5%;
+            //     @include max-screen($large) {
+            //         left:0;
+            //     }
+            // }
+            @include max-screen($large) {
+                font-size: em(10);
+                height: 340px;
+            }
+            
+        }
+        .casSlider__text {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            width: 95%;
+            font-style: normal;
+            padding-right: 0;
+            padding-left: 30%;
+            color:#000;
+            position: relative;
+            right:-55%;
+            @include max-screen($large) {
+                font-size: 10px;
+                margin-top:20px;
+                width: 80%;
+            }
+            @include max-screen($tablets) {
+                right:-40%;
+                width: 65%;
+            }
+        }
+        .casSlider__button{
+            width: 100%;
+            text-align: left;
+            display: inline-block;
+            float: left;
+            padding-left: 30%;
+            color:#000;
+            position: relative;
+            right:-55%;
+            @include max-screen($tablets) {
+                right:-40%;
+            }
+            .btn{
+                font-family: 'PT Sans', sans-serif;
+                font-size: 10px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 0.6px;
+                text-transform: uppercase;
+                text-align: left;
+                color: #000;
+                padding-top: 20px;
+                height: 30px;
+                &:before{
+                    border-left:2px solid $red;
+                    border-right:0;
+                    height: 20px;
+                    @include max-screen($large) {
+                        height: 14px;
+                    }
+                }
+            }
+        }
+    }
+    
+    &--street, &--skate{
+        padding: 0;
+        .casSlider__inner {
+            position: relative;
+            width: 100%;
+        }
+        .casSlider__title {
+            @include wrapper();
+            max-width: $grid-ls;
+            box-sizing: content-box;
+            position: absolute;
+            margin: 0 auto;
+            top:80px;
+            left:0;
+            right: 0;
+            z-index: 1;
+            @include max-screen($grid-ls) {
+                top:32px;
+                box-sizing: border-box;
+                line-height: 1.4;
+            }
+        }
+        .casSlider__content {
+            @include wrapper();
+            max-width: $grid-ls;
+            padding: 0;
+            box-sizing: content-box;
+            flex-wrap: wrap;
+            & > * {
+                float: left;
+            }
+            @include max-screen($grid-ls) {
+                box-sizing: border-box;
+            }
+        }
+        .casSlider__heading{
+            font-family: 'PT Sans', sans-serif;
+            width: 45%;
+            font-size: em(30);
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.13;
+            letter-spacing: normal;
+            color: $red;
+            @include max-screen($grid-ls) {
+                font-size: em(18);
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+        .casSlider__button{
+            margin-right: 55%;
+            @include max-screen($grid-ls) {
+                margin-right: 1px;
+            }
+            .btn{
+                @include max-screen($grid-ls) {
+                    padding-top: 20px;
+                }
+            }
+            .btn:before{
+                @include max-screen($grid-ls) {
+                    height: 20px;
+                }
+            }
+        }
+        .casSlider__text{
+            font-style: normal;
+            padding-right: 55%;
+            line-height: 1.5;
+            margin-top:20px;
+            @include max-screen($grid-ls) {
+                padding-right: 0;
+            } 
+        }
+        .casSlider-sb{
+            margin-top:-20px;
+        }
+        .swiper-container{
+            @include wrapper();
+            position: relative;
+            padding-top: em(180);
+            padding-bottom: em(166);
+            max-width: 100%;
+            width: 100%;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            z-index: 11;
+            box-sizing: border-box;
+            @include max-screen($grid-sl) {
+                min-height: 0;
+                padding-top: em(120);
+                padding-bottom: em(100);
+            }
+            
+        }
+        .casSlider__img{
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    &--skate{
+        .casSlider__title{
+            color:#000;
+        }
+        .casSlider__text{
+            color:#000;
+            @include max-screen($grid-ls) {
+                padding-right: 30%;
+            } 
+        }
+        .casSlider__button{
+            @include max-screen($grid-ls) {
+                margin-right: 30%;
+            }
+        }
+    }
+}

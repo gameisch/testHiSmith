@@ -1,0 +1,52 @@
+mixin footer(data)
+    footer.footer
+        .footer__inner
+            .footer__sections
+                .footer__links
+                    a(href='#').strong About
+                    ul
+                        - for (var i = 0; i < 6; i++)
+                            li
+                                a(href='#') About #{i}
+                .footer__links
+                    a(href='#').strong Page 1
+                    ul
+                        - for (var i = 0; i < 4; i++)
+                            li
+                                a(href='#') Page 1-#{i}
+                .footer__links
+                    a(href='#').strong Page 2
+                    ul
+                        - for (var i = 0; i < 4; i++)
+                            li
+                                a(href='#') Page 2-#{i}
+                .footer__links
+                    a(href='#').strong Page 3
+                    ul
+                .footer__links
+                    a(href='#').strong Page 4
+                    ul
+            .footer__contact
+                .footer__links
+                    a(href='#').strong Page 5
+                    .item
+                        span 5658 Morton Ford Suite 741
+                        a(href='mailto:#') mail@gmail.com
+                        a(href='tel:#') Т: +7 000 000 00 00
+                        a(href='#') Т: +7 000 000 00 00
+                        a(href='#').nolink Ф: +7 000 000 00 00
+        .footer__info
+                .footer__asset
+                    img(src='%=static=%img/content/asset-footer.png')
+                .footer__social
+                    .footer__social-text
+                        | Подписаться на рассылки
+                    .footer__social-links
+                        a(href='#').fa.fa-facebook
+                        a(href='#').fa.fa-twitter
+                        a(href='#').fa.fa-google-plus
+        .footer__copyright
+            span ЛОГО © 2018. Все права защищены.
+            a(href='#') Политика конфиденциальности
+            a(href='#') Условия пользования сайтом
+
